@@ -1,17 +1,72 @@
-import React from 'react';
+"use client";
+import { useEffect, useState } from "react";
+import { FaPhone, FaSms, FaVideo } from "react-icons/fa";
 
+const Timeline = () => {
+  const [timeline, setTimeline] = useState([]);
+  const [filter, setFilter] = useState("All");
 
-export const metadata = {
-  title: "B13-Timeline | Next Application",
-  description: "This application made by going through assingment",
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("timeline")) || [];
+    setTimeline(data);
+  }, []);
+
+  // 👉 Filter logic
+  const filteredData =
+    filter === "All"
+      ? timeline
+      : timeline.filter((item) => item.type === filter);
+
+  // 👉 Icon based on type
+  const getIcon = (type) => {
+    if (type === "Call") return <FaPhone />;
+    if (type === "Text") return <FaSms />;
+    if (type === "Video") return <FaVideo />;
+  };
+
+  return (
+    <div className="container mx-auto p-6">
+      <h1 className="text-3xl font-bold mb-4">Timeline</h1>
+
+      {/* FILTER BUTTONS */}
+      <div className="flex gap-2 mb-4">
+        {["All", "Call", "Text", "Video"].map((f) => (
+          <button
+            key={f}
+            onClick={() => setFilter(f)}
+            className={`btn ${
+              filter === f ? "btn-primary" : "btn-outline"
+            }`}
+          >
+            {f}
+          </button>
+        ))}
+      </div>
+
+      {/* TIMELINE LIST */}
+      <div className="space-y-4">
+        {filteredData.length === 0 && (
+          <p className="text-gray-500">No interactions yet</p>
+        )}
+
+        {filteredData.map((item) => (
+          <div
+            key={item.id}
+            className="card shadow p-4 flex items-center gap-4"
+          >
+            <div className="text-xl">{getIcon(item.type)}</div>
+
+            <div>
+              <h2 className="font-bold">{item.title}</h2>
+              <p className="text-sm text-gray-500">
+                {new Date(item.date).toLocaleDateString()}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
-const TimelinePage = () => {
-    return (
-        <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-            <h2>This is the Timeline Page</h2>
-        </div>
-    );
-};
-
-export default TimelinePage;
+export default Timeline;

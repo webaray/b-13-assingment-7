@@ -1,3 +1,4 @@
+import ActionButtons from "@/components/ActionButtons";
 import Image from "next/image";
 
 const FriendDetailsPage = async ({ params }) => {
@@ -5,6 +6,8 @@ const FriendDetailsPage = async ({ params }) => {
   const res = await fetch("http://localhost:3000/friend.json");
   const data = await res.json();
   const friend = data?.find((f) => Number(f.id) === Number(id));
+
+  console.log(friend);
 
   // ✅ SAFE GUARD — return early if friend not found
   if (!friend) {
@@ -114,11 +117,13 @@ const FriendDetailsPage = async ({ params }) => {
           <div className="card bg-base-100 shadow-md p-6">
             <h3 className="font-semibold text-lg mb-4">Quick Check-In</h3>
 
-            <div className="grid grid-cols-3 gap-4">
+            <ActionButtons friend={friend} />
+
+            {/* <div className="grid grid-cols-3 gap-4">
               <button className="btn flex flex-col h-20">📞 Call</button>
               <button className="btn flex flex-col h-20">💬 Text</button>
               <button className="btn flex flex-col h-20">🎥 Video</button>
-            </div>
+            </div> */}
           </div>
 
         </div>
