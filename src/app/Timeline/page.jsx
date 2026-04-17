@@ -49,17 +49,17 @@ const Timeline = () => {
           <p className="text-gray-500">No interactions yet</p>
         )}
 
-        {filteredData.map((item) => (
+        {filteredData.map((friend) => (
           <div
-            key={item.id}
-            className="card shadow p-4 flex items-center gap-4"
+            key={friend.id}
+            className="card shadow p-4 flex gap-4"
           >
-            <div className="text-xl">{getIcon(item.type)}</div>
+            <div className="text-xl">{getIcon(friend.type)}</div>
 
             <div>
-              <h2 className="font-bold">{item.title}</h2>
+              <h2 className="font-bold">{friend.name}</h2>
               <p className="text-sm text-gray-500">
-                {new Date(item.date).toLocaleDateString()}
+                {new Date(friend.time).toLocaleDateString()}
               </p>
             </div>
           </div>

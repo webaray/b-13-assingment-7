@@ -22,21 +22,21 @@ const ActionButtons = ({ friend }) => {
 
     toast.success(`${type} added to timeline`);
 
-    router.push("/timeline");
+    // router.push("/timeline");
   };
 
   return (
-    <div className="flex gap-3 mt-4">
-      <button onClick={() => handleAction("call")} className="btn btn-primary">
-        Call
+    <div className="grid grid-cols-3 gap-3 mt-4">
+      <button onClick={() => handleAction("call")} className="btn flex flex-col h-20">
+       📞  Call
       </button>
 
-      <button onClick={() => handleAction("text")} className="btn btn-secondary">
-        Text
+      <button onClick={() => handleAction("text")} className="btn flex flex-col h-20">
+        💬 Text
       </button>
 
-      <button onClick={() => handleAction("video")} className="btn btn-accent">
-        Video
+      <button onClick={() => handleAction("video")} className="btn flex flex-col h-20">
+        🎥 Video
       </button>
     </div>
   );

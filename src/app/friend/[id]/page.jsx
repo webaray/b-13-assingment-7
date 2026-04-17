@@ -118,12 +118,7 @@ const FriendDetailsPage = async ({ params }) => {
             <h3 className="font-semibold text-lg mb-4">Quick Check-In</h3>
 
             <ActionButtons friend={friend} />
-
-            {/* <div className="grid grid-cols-3 gap-4">
-              <button className="btn flex flex-col h-20">📞 Call</button>
-              <button className="btn flex flex-col h-20">💬 Text</button>
-              <button className="btn flex flex-col h-20">🎥 Video</button>
-            </div> */}
+            
           </div>
 
         </div>
