@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Loading from "@/components/Loading";
 
 const Friends = () => {
     const [friends, setFriends] = useState([]);
@@ -10,6 +11,10 @@ const Friends = () => {
             .then(res => res.json())
             .then(data => setFriends(data));
     }, []);
+
+      if (friends.length === 0) {
+    return <Loading />;
+  }
 
     return (
 
