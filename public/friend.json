@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "picture": "https://randomuser.me/api/portraits/men/1.jpg",
+    "email": "john.doe@example.com",
+    "days_since_contact": 12,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met in university. Love hiking together.",
+    "goal": 14,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Ahmed",
+    "picture": "https://randomuser.me/api/portraits/women/2.jpg",
+    "email": "sarah.ahmed@example.com",
+    "days_since_contact": 5,
+    "status": "on_track",
+    "tags": ["office", "designer"],
+    "bio": "Colleague from my first job. Very creative and supportive.",
+    "goal": 10,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 3,
+    "name": "Michael Chen",
+    "picture": "https://randomuser.me/api/portraits/men/3.jpg",
+    "email": "michael.chen@example.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": ["gym", "fitness"],
+    "bio": "Workout partner who keeps me motivated.",
+    "goal": 7,
+    "next_due_date": "2025-07-15"
+  },
+  {
+    "id": 4,
+    "name": "Ayesha Khan",
+    "picture": "https://randomuser.me/api/portraits/women/4.jpg",
+    "email": "ayesha.khan@example.com",
+    "days_since_contact": 2,
+    "status": "on_track",
+    "tags": ["family friend"],
+    "bio": "Family friend. We catch up during weekends.",
+    "goal": 14,
+    "next_due_date": "2025-07-25"
+  },
+  {
+    "id": 5,
+    "name": "David Smith",
+    "picture": "https://randomuser.me/api/portraits/men/5.jpg",
+    "email": "david.smith@example.com",
+    "days_since_contact": 9,
+    "status": "due_soon",
+    "tags": ["business", "client"],
+    "bio": "Client turned good friend. We discuss business ideas.",
+    "goal": 10,
+    "next_due_date": "2025-07-19"
+  },
+  {
+    "id": 6,
+    "name": "Nusrat Jahan",
+    "picture": "https://randomuser.me/api/portraits/women/6.jpg",
+    "email": "nusrat.jahan@example.com",
+    "days_since_contact": 15,
+    "status": "overdue",
+    "tags": ["school", "best friend"],
+    "bio": "Best friend since school days. Shares everything.",
+    "goal": 7,
+    "next_due_date": "2025-07-14"
+  },
+  {
+    "id": 7,
+    "name": "Alex Rodriguez",
+    "picture": "https://randomuser.me/api/portraits/men/7.jpg",
+    "email": "alex.rodriguez@example.com",
+    "days_since_contact": 3,
+    "status": "on_track",
+    "tags": ["travel", "adventure"],
+    "bio": "Travel buddy. Explored multiple countries together.",
+    "goal": 14,
+    "next_due_date": "2025-07-26"
+  },
+  {
+    "id": 8,
+    "name": "Emily Watson",
+    "picture": "https://randomuser.me/api/portraits/women/8.jpg",
+    "email": "emily.watson@example.com",
+    "days_since_contact": 11,
+    "status": "due_soon",
+    "tags": ["freelance", "developer"],
+    "bio": "Met through freelancing projects. Great problem solver.",
+    "goal": 12,
+    "next_due_date": "2025-07-21"
+  }
+]
