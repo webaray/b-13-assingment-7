@@ -4,7 +4,7 @@ import Link from 'next/link';
 const FriendCard = ({ friend }) => {
 
     return (
-        <Link href={`http://localhost:3000/friend/${Number(friend.id)}`}>
+        <Link href={`https://b-13-next-assingment-7.vercel.app//friend/${Number(friend.id)}`}>
 
             <div className="card bg-base-100 shadow-sm hover:shadow-lg transition cursor-pointer">
 

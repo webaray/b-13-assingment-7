@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const FriendDetailsPage = async ({ params }) => {
   const { id } = await params;
-  const res = await fetch("http://localhost:3000/friend.json");
+  const res = await fetch("https://b-13-next-assingment-7.vercel.app/friend.json");
   const data = await res.json();
   const friend = data?.find((f) => Number(f.id) === Number(id));
 
@@ -15,7 +15,7 @@ const FriendDetailsPage = async ({ params }) => {
   }
 
   return (
-    <div className="container mx-auto p-6 bg-base-200 min-h-screen">
+    <div className="container mx-auto p-6 bg-base-200 jusctify-center py-10">
 
       <div className="grid lg:grid-cols-3 gap-6">
 

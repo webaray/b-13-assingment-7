@@ -22,20 +22,30 @@ const ActionButtons = ({ friend }) => {
 
     toast.success(`${type} added to timeline`);
 
+    // চাইলে timeline page এ পাঠাবে
     // router.push("/timeline");
   };
 
   return (
     <div className="grid grid-cols-3 gap-3 mt-4">
-      <button onClick={() => handleAction("call")} className="btn flex flex-col h-20">
-       📞  Call
+      <button
+        onClick={() => handleAction("Call")}
+        className="btn flex flex-col h-20"
+      >
+        📞 Call
       </button>
 
-      <button onClick={() => handleAction("text")} className="btn flex flex-col h-20">
+      <button
+        onClick={() => handleAction("Text")}
+        className="btn flex flex-col h-20"
+      >
         💬 Text
       </button>
 
-      <button onClick={() => handleAction("video")} className="btn flex flex-col h-20">
+      <button
+        onClick={() => handleAction("Video")}
+        className="btn flex flex-col h-20"
+      >
         🎥 Video
       </button>
     </div>
